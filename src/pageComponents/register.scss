@@ -1,0 +1,132 @@
+@mixin registerBtn(){
+padding: 15px;
+background-color: #0d820d;
+color: #fff;
+border: none;
+outline: none;
+font-size: 20px;
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 3px;
+cursor: pointer;
+}
+.registerBlock{
+width: 450px;
+height: 600px;
+background-color: #fff;
+display: flex;
+justify-content: center;
+align-items: center;
+
+   .buttonBlock{
+    width: 250px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .RegisterButtton{
+        @include registerBtn()
+    }
+
+   
+   }
+
+}
+
+.checkBoxes{
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+   
+    input[type=radio]{
+       appearance: none;
+        border: 1px solid #ccc;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        border-radius: 50%;
+        &::before{
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 10px;
+            height: 10px;
+            background-color: #16bd13;
+            transition: all 0.5s ease;
+            border-radius: 50%;
+        }
+        &:checked{
+            &::before{
+                top: 50%;  
+            }
+        }
+    }
+}
+
+.checkDiv{
+    padding: 15px;
+
+}
+
+.hideShow{
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+h2{
+    color: #fff;
+}
+
+.forImage{
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    flex-direction: row-reverse;
+    .imageBox{
+        width: 100px;
+        height:100px;
+      
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+.upload{
+    width: 114px;
+    overflow: hidden;
+    input[type=file]{
+  display: none;
+    }
+    .buttonAdd{
+        color: #fff;
+        width: 115px;
+        height: 53px;
+        background-color: #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        user-select: none;
+            }
+}
+}
+
+
+

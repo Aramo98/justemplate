@@ -1,0 +1,114 @@
+
+@mixin otherB{
+    width: 391px;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+@mixin SignInBlock{
+width: 50%;
+height: 300px;
+background-color: #fff;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+gap: 15px   ;
+}
+
+.signInUpBlock{
+    @include SignInBlock()
+}
+
+.signInUpBlock>form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.inputBox{
+    width: 300px;
+    height: 70px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+    flex-direction: column;
+    
+}
+.inputBox>input{
+    width: 100%;
+    height: 40px;
+  border: none;
+border-bottom: 2px solid black;
+    outline: none;
+
+}
+
+
+
+.inputBox{
+    .placeHolder{
+        position: absolute;
+        left: 0;
+        transition: all 0.5s ease;
+        }
+
+        .hideShowButton{
+            width: 19px;
+            height: 19px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            right: 15px;
+            font-size: 15px;
+        }
+}
+
+.inputBox>input:focus ~ .placeHolder,
+.inputBox>input:valid ~ .placeHolder{
+    transform: translateY(-15px);
+font-size: 10px;
+}
+
+.buttonsBlock{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 300px;
+
+}
+
+.buttonsBlock{
+
+    button{
+        padding: 7px 15px;
+    }
+    .registerBtn{
+        color: #000;
+        text-decoration: none;
+      
+        padding: 7px 15px;
+        background-color: #ccc
+    }
+}
+
+
+.otherBlcok{
+    @include otherB();
+  .Link{
+    color: #000;
+    text-decoration: none;
+    transition: all 0.5s;
+    &:hover{
+        color: #f00;
+
+    }
+  }
+}

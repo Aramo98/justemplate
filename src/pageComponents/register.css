@@ -1,0 +1,120 @@
+.registerBlock {
+  width: 450px;
+  height: 600px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.registerBlock .buttonBlock {
+  width: 250px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.registerBlock .buttonBlock .RegisterButtton {
+  padding: 15px;
+  background-color: #0d820d;
+  color: #fff;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+  cursor: pointer;
+}
+
+.checkBoxes {
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.checkBoxes input[type=radio] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 1px solid #ccc;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.checkBoxes input[type=radio]::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background-color: #16bd13;
+  transition: all 0.5s ease;
+  border-radius: 50%;
+}
+.checkBoxes input[type=radio]:checked::before {
+  top: 50%;
+}
+
+.checkDiv {
+  padding: 15px;
+}
+
+.hideShow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+h2 {
+  color: #fff;
+}
+
+.forImage {
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+.forImage .imageBox {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.forImage .imageBox img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.forImage .upload {
+  width: 114px;
+  overflow: hidden;
+}
+.forImage .upload input[type=file] {
+  display: none;
+}
+.forImage .upload .buttonAdd {
+  color: #fff;
+  width: 115px;
+  height: 53px;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}/*# sourceMappingURL=register.css.map */

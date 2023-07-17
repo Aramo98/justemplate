@@ -1,0 +1,272 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  .dark{
+background-color: #000;
+  }
+}
+.NavbarBlock.isActive,
+.NavbarBlock.isActive{
+  background-color: #ccc;
+}
+
+header{
+  width: 100%;
+  height: 15vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+background-color: azure;
+padding: 15px;
+}
+
+header.isActive{
+  background-color: rgb(67, 65, 65);
+}
+
+.NavbarBlock{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+li{
+  list-style: none;
+  font-size: 30px;
+
+}
+li>a{
+    display: flex;
+ 
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+color: black;
+}
+.SearchBar{
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ gap: 3px;
+ border: 1px solid #ccc;
+}
+.SearchBar>form{
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.SearchBar>form>input{
+  width: 100%;
+  padding: 12px 7px;
+  border: none;
+  outline: none;
+  
+}
+.SearchBar>form>button{
+  width: 50px;
+  height: 40px;
+  border: none;
+  outline: none;
+
+}
+
+.toggle{
+  width: 45px;
+  height: 45px;
+  border: 1px solid #ccc;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+}
+
+.toggleClose{
+  width: 45px;
+  height: 45px;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  position: absolute;
+  top: 15px;
+  right:  15px;
+}
+
+
+
+.container{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.container>img{
+  width: 100%;
+  height: 100%;
+  object-fit:  cover;
+}
+
+
+
+.overlay{
+  position: absolute;
+top: 0;
+left: 0;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.overlay>.content{
+  width: auto;
+  height: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 45px;
+  color: #fff;
+  gap: 15px;
+}
+
+.SubscribeButton{
+  padding: 15px;
+  font-size: 18px;
+  cursor: pointer;
+  border: none;
+}
+
+.subBlock{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 4;
+  width: 500px;
+  height: 300px;
+  background-color: #fff;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: all 0.5s ease;
+}
+
+.subBlock.active{
+  display: flex;
+  transition: all 0.5s ease;
+}
+
+
+.subBlock>form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.subBlock>form>input{
+  width: 100%;
+  padding: 12px 7px;
+  border: none;
+  outline: none;
+  border: 1px solid #ccc;
+  
+}
+.subBlock>form>button{
+  width: auto;
+  height: 40px;
+  border: none;
+  outline: none;
+
+}
+
+@media screen and (max-width: 991px) {
+  .toggle{
+    display: flex;
+  }
+  .NavbarBlock{
+    display: none;
+  }
+  .overlay> .content>h1{
+    text-align: center;
+    font-size: 40px;
+  }
+  .overlay> .content>p{
+    text-align: center;
+    font-size: 40px;
+  }
+}
+
+.closebutton{
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 20px;
+  
+}
+
+.lessText{
+  font-size: 15px;
+text-align: center;
+}
+
+.LessButton{
+  color: #fff;
+  text-decoration: underline;
+  text-transform: capitalize;
+}
+
+.signInUpButtonBlock{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  gap: 6px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+    gap: 15px;
+  }
+}
+
+.ThemeButton{
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+width: 50px;
+height: 50px;
+  z-index: 3;
+  border: none;
+  box-shadow: inset 2px 2px 5px 2px #000;
+  border-radius: 50%;
+  font-size: 20px;
+display: flex;
+justify-content: center;
+align-items: center;
+cursor: pointer;
+}
